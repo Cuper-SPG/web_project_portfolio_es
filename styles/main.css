@@ -9,9 +9,9 @@ main {
   font-family: "OpenSans", Arial, sans-serif;
 }
 
-.skill__section {
+.skills {
   width: 100%;
-  padding: 0 120px 80px 120px;
+  padding: 0 120px 100px;
   margin: 0;
   display: flex;
   align-items: center;
@@ -21,19 +21,107 @@ main {
 
 /*======= SKILL SECTION ========*/
 
-.skill__container {
+.skills__container {
   padding: 0;
   margin: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.section__title {
+.subtitle {
   font-family: "ArchivoBlack", Arial, sans-serif;
   font-weight: 400;
   font-size: 40px;
   line-height: 100%;
   letter-spacing: 0%;
   padding: 0 0 50px 0;
+  margin: 0;
+  width: 100%;
+}
+
+/*======= SKILL ICONS  ========*/
+.skills__list {
+  padding: 0;
+  display: grid;
+  /* Creamos 6 columnas que se estiran equitativamente */
+  grid-template-columns: repeat(6, 1fr);
+  /* Separación limpia entre columnas, sin usar margin */
+  gap: 15px;
+}
+
+.skills__item {
+  /* Un mismo padding interno para todas las cajas (arriba/abajo, izquierda/derecha) */
+  padding: 0;
+  /* Asegura que no tengan márgenes externos individuales */
+  margin: 0;
+
+  /* Activamos Flexbox en cada caja para centrar el icono y el texto verticalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* Espacio entre el icono y el texto */
+
+  text-align: center;
+  border-radius: 8px;
+}
+
+.skills__icon--html .skills__icon--css {
+  width: 50px;
+  height: 57px;
+}
+
+.skills__icon {
+  width: 50px;
+  height: 50px;
+}
+
+/*======== PROJECTS SECTION ========*/
+.projects {
+  width: 100%;
+  padding: 0 120px 70px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects__container {
+  display: grid;
+  grid-template-columns: 590px 590px;
+  gap: 20px;
+}
+
+.projects__card {
+  height: 670px;
+  width: 590px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects__card-image {
+  width: 590px;
+  height: 330px;
+  opacity: 1;
+}
+
+.projects__card-image--coffee {
+  background-image: url(../images/coffeshop.png);
+}
+
+.projects__card-image--code {
+  background-image: url(../images/miproyecto.png);
+}
+
+.projects__card-content {
+  background-color: #1c1c1c;
+  width: 590px;
+  height: 340px;
+  opacity: 1;
+  padding: 0;
   margin: 0;
 }

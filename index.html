@@ -42,33 +42,82 @@
       </section>
     </header>
     <main class="main">
-      <section class="skill__section">
-        <div class="skill__container">
-          <h2 class="section__title">Habilidades y herramientas</h2>
-          <ul class="skills">
+      <section class="skills">
+        <div class="skills__container">
+          <h2 class="subtitle skills__title">Habilidades y herramientas</h2>
+          <ul class="skills__list">
             <li class="skills__item">
-              <img class="skills__item-icon" />
-              <p class="skills__item-label"></p>
+              <img
+                class="skills__icon skills__icon--html"
+                src="./images/html.svg"
+                alt="Html logo"
+              />
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__icon skills__icon--css"
+                src="./images/css.svg"
+                alt="css logo"
+              />
+            </li>
+            <li class="skills__item">
+              <img class="skills__icon" src="./images/js.svg" alt="java logo" />
+            </li>
+            <li class="skills__item">
+              <img class="skills__icon" src="./images/git.svg" alt="git logo" />
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__icon"
+                src="./images/github.svg"
+                alt="github logo"
+              />
+            </li>
+            <li class="skills__item">
+              <img
+                class="skills__icon"
+                src="./images/chat.svg"
+                alt="chatgpt logo"
+              />
             </li>
           </ul>
         </div>
       </section>
-      <section class="projects__section">
+      <section class="projects">
+        <h2 class="subtitle projects__title">Proyectos destacados</h2>
         <div class="projects__container">
-          <h2 class="section__title"></h2>
-          <div class="project__card">
-            <div class="project__card-image">
-              <img class="card__image" />
-              <ul class="card__icon"></ul>
-            </div>
-            <div class="project__card-info">
-              <p class="card__title"></p>
-              <p class="card__text"></p>
-              <ul class="card__icons">
-                <li class="card__icon"></li>
+          <article class="projects__card">
+            <div class="projects__card-image projects__card-image--coffee">
+              <ul class="projects__card-icons">
+                <li class="projects__card-icon"></li>
+                <li class="projects__card-icon"></li>
               </ul>
             </div>
-          </div>
+            <div class="projects__card-content">
+              <p class="projects__card-title"></p>
+              <p class="projects__card-text"></p>
+              <ul class="projects__card-links">
+                <li class="projects__card-link projects__card-link--demo"></li>
+                <li class="projects__card-link projects__card-link--git"></li>
+              </ul>
+            </div>
+          </article>
+          <article class="projects__card">
+            <div class="projects__card-image projects__card-image--code">
+              <ul class="projects__card-icons">
+                <li class="projects__card-icon"></li>
+                <li class="projects__card-icon"></li>
+              </ul>
+            </div>
+            <div class="projects__card-content">
+              <p class="projects__card-title"></p>
+              <p class="projects__card-text"></p>
+              <ul class="projects__card-links">
+                <li class="projects__card-link projects__card-link--demo"></li>
+                <li class="projects__card-link projects__card-link--git"></li>
+              </ul>
+            </div>
+          </article>
         </div>
       </section>
     </main>
