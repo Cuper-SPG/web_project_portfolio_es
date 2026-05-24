@@ -1,75 +1,114 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
 ul {
   list-style: none;
 }
 
-main {
-  width: 100%;
+body {
   margin: 0;
+
+  background: radial-gradient(circle at bottom right, #7b2cff, #050712 55%);
+
   color: aliceblue;
+
   font-family: "OpenSans", Arial, sans-serif;
+
+  overflow-x: hidden;
 }
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+  width: 100%;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.skills,
+.projects {
+  width: 100%;
+  max-width: 1440px;
+
+  margin: 0 auto;
+
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+/* =========================
+   SKILLS
+========================= */
 
 .skills {
-  width: 100%;
-  padding: 0 120px 100px;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  align-items: flex-start;
-}
+  padding-bottom: 100px;
 
-/*======= SKILL SECTION ========*/
+  display: flex;
+  flex-direction: column;
+}
 
 .skills__container {
-  padding: 0;
-  margin: 0;
   width: 100%;
+
   display: flex;
   flex-direction: column;
 }
 
+/* =========================
+   SUBTITLE
+========================= */
+
 .subtitle {
-  font-family: "ArchivoBlack", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  padding: 0 0 50px 0;
-  margin: 0;
   width: 100%;
+
+  margin: 0;
+  padding-bottom: 50px;
+
+  font-family: "ArchivoBlack", Arial, sans-serif;
+
+  font-weight: 400;
+
+  font-size: 40px;
+
+  line-height: 1;
 }
 
-/*======= SKILL ICONS  ========*/
+/* =========================
+   SKILLS LIST
+========================= */
+
 .skills__list {
+  margin: 0;
   padding: 0;
+
   display: grid;
-  /* Creamos 6 columnas que se estiran equitativamente */
+
   grid-template-columns: repeat(6, 1fr);
-  /* Separación limpia entre columnas, sin usar margin */
+
   gap: 15px;
 }
 
 .skills__item {
-  /* Un mismo padding interno para todas las cajas (arriba/abajo, izquierda/derecha) */
-  padding: 0;
-  /* Asegura que no tengan márgenes externos individuales */
   margin: 0;
+  padding: 0;
 
-  /* Activamos Flexbox en cada caja para centrar el icono y el texto verticalmente */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px; /* Espacio entre el icono y el texto */
-
-  text-align: center;
-  border-radius: 8px;
-}
-
-.skills__icon--html .skills__icon--css {
-  width: 50px;
-  height: 57px;
 }
 
 .skills__icon {
@@ -77,36 +116,60 @@ main {
   height: 50px;
 }
 
-/*======== PROJECTS SECTION ========*/
+.skills__icon--html,
+.skills__icon--css {
+  width: 50px;
+  height: 57px;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
 .projects {
-  width: 100%;
-  padding: 0 120px 70px;
-  margin: 0;
+  padding-bottom: 70px;
+
   display: flex;
-  align-items: center;
   flex-direction: column;
-  align-items: center;
 }
 
 .projects__container {
   display: grid;
-  grid-template-columns: 590px 590px;
+
+  grid-template-columns: repeat(2, 590px);
+
   gap: 20px;
+
+  justify-content: center;
 }
 
+/* =========================
+   PROJECT CARD
+========================= */
+
 .projects__card {
-  height: 670px;
   width: 590px;
-  padding: 0;
-  margin: 0;
+
+  height: 670px;
+
   display: flex;
   flex-direction: column;
 }
 
+/* =========================
+   CARD IMAGE
+========================= */
+
 .projects__card-image {
   width: 590px;
   height: 330px;
-  opacity: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .projects__card-image--coffee {
@@ -117,11 +180,299 @@ main {
   background-image: url(../images/miproyecto.png);
 }
 
+/* =========================
+   CARD ICONS
+========================= */
+
+.projects__card-icons {
+  width: 100%;
+
+  margin-top: auto;
+  margin-bottom: 0;
+
+  padding: 0 10px 10px 12px;
+
+  display: flex;
+  gap: 10px;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.005), rgba(0, 0, 0, 0.2));
+}
+
+.projects__card-icon {
+  width: 40px;
+  height: 40px;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.projects__card-icon--html {
+  background-image: url(../images/html.svg);
+}
+
+.projects__card-icon--css {
+  background-image: url(../images/css.svg);
+}
+
+.projects__card-icon--java {
+  background-image: url(../images/js.svg);
+}
+
+.projects__card-icon--atom {
+  background-image: url(../images/atomo.png);
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+
 .projects__card-content {
-  background-color: #1c1c1c;
   width: 590px;
   height: 340px;
-  opacity: 1;
-  padding: 0;
+
+  background-color: #1c1c1c;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.projects__card-title {
   margin: 0;
+
+  padding: 30px 30px 20px;
+
+  font-weight: 700;
+
+  font-size: 24px;
+
+  line-height: 1.2;
+}
+
+.projects__card-text {
+  margin: 0;
+
+  padding: 0 30px;
+
+  font-size: 18px;
+
+  line-height: 1.2;
+
+  flex-grow: 1;
+
+  overflow: auto;
+}
+
+.projects__card-links {
+  margin: 0;
+  margin-top: auto;
+
+  padding: 30px;
+
+  display: flex;
+
+  gap: 20px;
+}
+
+.projects__card-link {
+  height: 22px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.projects__card-link--demo {
+  width: 132px;
+
+  background-image: url(../images/demo.png);
+}
+
+.projects__card-link--git {
+  width: 83px;
+
+  background-image: url(../images/gitihubicon.png);
+}
+
+/* =========================
+   768px
+========================= */
+
+@media screen and (max-width: 768px) {
+  .skills,
+  .projects {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .subtitle {
+    font-size: 32px;
+
+    padding-bottom: 40px;
+  }
+
+  /* =========================
+     SKILLS
+  ========================= */
+
+  .skills__list {
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 20px;
+  }
+
+  /* =========================
+     PROJECTS
+  ========================= */
+
+  .projects__container {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .projects__card {
+    width: 688px;
+
+    height: auto;
+
+    margin: 0 auto;
+  }
+
+  .projects__card-image {
+    width: 688px;
+
+    height: 330px;
+  }
+
+  .projects__card-content {
+    width: 688px;
+
+    height: 340px;
+  }
+
+  .projects__card-title {
+    font-size: 22px;
+  }
+
+  .projects__card-text {
+    font-size: 17px;
+  }
+}
+
+/* =========================
+   320px
+========================= */
+
+@media screen and (max-width: 320px) {
+  body {
+    background: radial-gradient(circle at bottom right, #ff562c, #050712 55%);
+  }
+
+  .skills,
+  .projects {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .skills {
+    padding-bottom: 60px;
+  }
+
+  .projects {
+    padding-bottom: 60px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+
+    padding-bottom: 32px;
+  }
+
+  /* =========================
+     SKILLS
+  ========================= */
+
+  .skills__list {
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-rows: repeat(2, auto);
+
+    gap: 20px;
+  }
+
+  .skills__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .skills__icon--html,
+  .skills__icon--css {
+    width: 30px;
+    height: 34px;
+  }
+
+  /* =========================
+     PROJECTS
+  ========================= */
+
+  .projects__container {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .projects__card {
+    width: 100%;
+
+    max-width: 280px;
+
+    height: auto;
+
+    margin: 0 auto;
+  }
+
+  .projects__card-image {
+    width: 100%;
+
+    height: 160px;
+  }
+
+  .projects__card-content {
+    width: 100%;
+
+    height: 454px;
+  }
+
+  .projects__card-title {
+    padding: 24px 20px 16px;
+
+    font-size: 20px;
+  }
+
+  .projects__card-text {
+    padding: 0 20px;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+  }
+
+  .projects__card-links {
+    padding: 20px;
+
+    gap: 16px;
+  }
+
+  .projects__card-link--demo {
+    width: 110px;
+  }
+
+  .projects__card-link--git {
+    width: 70px;
+  }
+
+  .projects__card-icon {
+    width: 32px;
+    height: 32px;
+  }
 }
