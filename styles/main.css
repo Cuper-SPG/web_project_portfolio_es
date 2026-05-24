@@ -355,6 +355,148 @@ body {
   }
 }
 
+@media screen and (max-width: 480px) {
+  /* =========================
+     HEADER
+  ========================= */
+
+  .header__content {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "image"
+      "info";
+
+    padding: 40px 24px;
+
+    gap: 32px;
+  }
+
+  .header__figure {
+    width: 100%;
+
+    max-width: 260px;
+
+    margin: 0 auto;
+  }
+
+  .header__figure-image {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+  }
+
+  .header__title {
+    font-size: 44px;
+  }
+
+  .header__subtitle {
+    font-size: 16px;
+  }
+
+  .header__description {
+    font-size: 16px;
+
+    line-height: 1.6;
+  }
+
+  .header__list {
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  /* =========================
+     MAIN
+  ========================= */
+
+  .skills,
+  .projects {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .subtitle {
+    font-size: 30px;
+
+    padding-bottom: 36px;
+  }
+
+  /* =========================
+     SKILLS
+  ========================= */
+
+  .skills__list {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+  }
+
+  .skills__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skills__icon--html,
+  .skills__icon--css {
+    width: 40px;
+    height: 46px;
+  }
+
+  /* =========================
+     PROJECTS
+  ========================= */
+
+  .projects__container {
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+  }
+
+  .projects__card {
+    width: 100%;
+
+    max-width: 430px;
+
+    height: auto;
+  }
+
+  .projects__card-image {
+    width: 100%;
+    height: 280px;
+  }
+
+  .projects__card-content {
+    width: 100%;
+
+    min-height: 360px;
+  }
+
+  .projects__card-title {
+    font-size: 22px;
+
+    padding: 24px 24px 16px;
+  }
+
+  .projects__card-text {
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    padding: 0 24px;
+  }
+
+  .projects__card-links {
+    padding: 24px;
+  }
+  .projects__card-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 /* =========================
    320px
 ========================= */
@@ -418,19 +560,21 @@ body {
   }
 
   .projects__card {
-    width: 100%;
-
     max-width: 280px;
-
-    height: auto;
-
-    margin: 0 auto;
   }
 
   .projects__card-image {
     width: 100%;
 
-    height: 160px;
+    height: 140px;
+
+    background-size: contain;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-color: #111111;
   }
 
   .projects__card-content {
