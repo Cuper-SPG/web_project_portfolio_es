@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "ArchivoBlack";
+  src:
+    url("../vendor/ArchivoBlack-Regular.woff2") format("woff2"),
+    url("../vendor/ArchivoBlack-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "OpenSans";
+  src:
+    url("../vendor/OpenSans-Regular.woff2") format("woff2"),
+    url("../vendor/OpenSans-Regular.woff") format("woff");
+}
