@@ -10,3 +10,158 @@
     url("../vendor/OpenSans-Regular.woff2") format("woff2"),
     url("../vendor/OpenSans-Regular.woff") format("woff");
 }
+
+.footer {
+  margin: 0;
+  padding: 0;
+  height: 320px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle 300px at 50% 50%,
+      rgba(91, 79, 255, 0.18) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      circle 500px at 50% 50%,
+      rgba(91, 79, 255, 0.18) 0%,
+      transparent 70%
+    );
+  pointer-events: none;
+}
+
+/*.footer__circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(109, 109, 255, 0.05);
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  box-shadow: 0 0 80px 40px rgba(109, 109, 255, 0.06);
+}*/
+
+.footer__contact {
+  padding: 80px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.footer__title {
+  width: 100%;
+  margin: 0;
+  padding-bottom: 20px;
+  font-family: "ArchivoBlack", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1;
+  text-align: center;
+}
+
+.footer__text {
+  font-family: "OpenSans", Arial, sans-serif;
+  color: #6d6dff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* =========================
+   SOCIALS LIST
+========================= */
+
+.footer__socials-list {
+  margin: 0;
+  padding: 27px 0 0;
+  width: 336px;
+  height: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 80px;
+  justify-content: center;
+  z-index: 2;
+}
+
+.footer__item {
+  margin: 0;
+  padding: 0;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__item-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* =========================
+   FOOTER RESPONSIVE
+========================= */
+
+@media screen and (max-width: 768px) {
+  .footer__contact {
+    padding-top: 0px;
+  }
+
+  .footer {
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+  }
+
+  .footer::before {
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer {
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+  }
+
+  .footer::before {
+    z-index: -1;
+  }
+
+  .footer__contact {
+    padding-top: 0px;
+  }
+
+  .footer__title {
+    font-size: 28px;
+  }
+
+  /*.footer__circle {
+    width: 220px;
+    height: 220px;
+  }*/
+
+  .footer__socials-list {
+    gap: 0px;
+    width: 90%;
+    padding-left: 30px;
+  }
+}

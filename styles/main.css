@@ -26,14 +26,15 @@ ul {
 
 body {
   margin: 0;
-
+  background-color: #050712;
+  /*
   background: radial-gradient(circle at bottom right, #7b2cff, #050712 55%);
 
   color: aliceblue;
 
   font-family: "OpenSans", Arial, sans-serif;
 
-  overflow-x: hidden;
+  overflow-x: hidden;*/
 }
 
 /* =========================
@@ -136,7 +137,7 @@ body {
 ========================= */
 
 .projects {
-  padding-bottom: 70px;
+  padding-bottom: 0px;
 
   display: flex;
   flex-direction: column;
@@ -269,6 +270,7 @@ body {
   flex-grow: 1;
 
   overflow: auto;
+  text-align: justify;
 }
 
 .projects__card-links {
@@ -307,7 +309,11 @@ body {
 ========================= */
 
 @media screen and (max-width: 768px) {
-  .skills,
+  .skills {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+  }
   .projects {
     padding-left: 30px;
     padding-right: 30px;
@@ -516,7 +522,7 @@ body {
 
 @media screen and (max-width: 320px) {
   body {
-    background: radial-gradient(circle at bottom right, #ff562c, #050712 55%);
+    background-color: #050712;
   }
 
   .skills,
@@ -530,7 +536,7 @@ body {
   }
 
   .projects {
-    padding-bottom: 60px;
+    padding-bottom: 0;
   }
 
   .subtitle {

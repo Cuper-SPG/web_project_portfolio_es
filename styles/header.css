@@ -26,8 +26,7 @@ img {
 body {
   margin: 0;
 
-  background: radial-gradient(circle at bottom right, #7b2cff, #050712 55%);
-
+  /*background: radial-gradient(circle at bottom right, #7b2cff, #050712 55%);*/
   color: aliceblue;
 
   font-family: "OpenSans", Arial, sans-serif;
@@ -41,6 +40,25 @@ body {
 
 .header {
   width: 100%;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 60% 50% at 69% 53%,
+      rgba(91, 79, 255, 0.18) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 40% 40% at 69% 53%,
+      rgba(155, 91, 255, 0.12) 0%,
+      transparent 60%
+    );
+  pointer-events: none;
 }
 
 .header__content {
@@ -230,8 +248,28 @@ body {
 ========================= */
 
 @media screen and (max-width: 768px) {
+  .header::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background:
+      radial-gradient(
+        ellipse 70% 50% at 70% 10%,
+        rgba(91, 79, 255, 0.18) 0,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 70% 50% at 67% 20%,
+        rgba(155, 91, 255, 0.12) 0%,
+        transparent 60%
+      );
+    pointer-events: none;
+  }
+
   .header__content {
     padding: 30px;
+    padding-bottom: 50px;
 
     gap: 32px;
 
@@ -288,8 +326,17 @@ body {
 ========================= */
 
 @media screen and (max-width: 320px) {
-  body {
-    background: radial-gradient(circle at bottom right, #ff562c, #050712 55%);
+  .header::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: radial-gradient(
+      circle 700px at 80% 10%,
+      rgba(91, 79, 255, 0.18) 0,
+      transparent 70%
+    );
+    pointer-events: none;
   }
 
   .header__content {
